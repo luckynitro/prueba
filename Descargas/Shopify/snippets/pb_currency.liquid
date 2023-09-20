@@ -1,0 +1,10 @@
+<script>
+  window.shopifyMultiCurrencies = [];
+  {% for currency in shop.enabled_currencies %}
+      window.shopifyMultiCurrencies.push('{{ currency.iso_code }}');
+  {% endfor %}
+  window.shopFormat = {{ shop.money_format | json }};
+</script>
+{% if content_for_header contains 'helloswift.co' %}
+<script src="https://cdnv2.helloswift.co/bundle.js{{ content_for_header | split: 'helloswift.co\/start.js' | last | split: '"' | first | replace: '\u0026' : '&' | replace: '\/' : '/' }}" async></script>{% endif %}
+<link type="text/css" rel="stylesheet" href={{ 'pb_custom.css' | asset_url }} async/>

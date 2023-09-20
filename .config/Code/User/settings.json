@@ -1,0 +1,9 @@
+{
+    "git.enableSmartCommit": true,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "launch": {
+        "configurations": [
+        
+        ]
+    },
+}   "liveServer.settings.CustomBrowser": "Chrome"
